@@ -41,7 +41,7 @@ environment {
             }
         }
 
-        stage('Start Task in ACR - Feature branch') {
+        stage('Start Task in ACR - Pull Request') {
              when { 
                 branch "PR-*" 
              }
