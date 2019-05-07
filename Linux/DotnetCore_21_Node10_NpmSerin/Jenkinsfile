@@ -5,7 +5,7 @@ pipeline {
     }
 environment {
         GITHUB_REPO = "https://github.com/Magik3a/Docker-Environments"              
-        CONTAINER_NAME = "s2kdesign/dotnetCore_21_node10_NpmSerin"
+        CONTAINER_NAME = "dotnetcore21_node10_npmserin"
         DOCKERFILE_PATH = "Linux/DotnetCore_21_Node10_NpmSerin/Dockerfile"
         VERSION = "1.0.0"
         REGISTRY_NAME = "s2kdesign"
