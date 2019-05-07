@@ -40,5 +40,15 @@ environment {
         
             }
         }
+
+        stage('Start Task in ACR - Feature branch') {
+             when { 
+                branch "PR-*" 
+             }
+            steps{
+               acrQuickTask azureCredentialsId: "${AZURE_CREDENTIALS_ID}", dockerfile: "${DOCKERFILE_PATH}", gitPath: '', gitRefspec: '', gitRepo:  "${GITHUB_REPO}", imageNames: [[image: "${CONTAINER_NAME}:${BRANCH_NAME.replaceAll("/", "-").toLowerCase()}"]], registryName: "${REGISTRY_NAME}", resourceGroupName: "${RESOURCE_GROUP_NAME}", tarball: '', variant: ''
+        
+            }
+        }
     }
 }
